@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <!-- linked css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome CDN visit => "fontawesome.com" for icons -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js'></script>
+</head>
+<body>
+    <div id="container">
+        <!-- side bar -->
+        <div id="sidebar">
+            <!-- logo -->
+            <div id="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+
+            <!-- navigation bar open button -->
+            <div id="button" class="openNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- main navigation bar -->
+        <div id="navbar-container">
+            <div id="navbar">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Customize</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main page -->
+        <div id="main">
+            <!-- page header -->
+            <div id="header">
+                <!-- page title -->
+                <div id="title">DASHBOARD</div>
+                <!-- search box -->
+                <div id="searchBox">
+                    <input type="text" name="" placeholder="Search or type URL...">
+                    <input type="submit" value="Search">
+                </div>
+                <!-- logout button -->
+                <div id="logout">Logout</div>
+            </div>
+
+            <!-- data -->
+            <div id="analytics">
+                <!-- cards -->
+                <!-- user card -->
+                <div class="cards">
+                    <!-- icon -->
+                    <i class="fas fa-users icons"></i>
+                    <h2>100+</h2>
+                    <h4>Users</h4>
+                </div>
+                <!-- Projects card -->
+                <div class="cards">
+                    <!-- icon -->
+                    <i class="fas fa-store icons"></i>
+                    <h2>250+</h2>
+                    <h4>Projects</h4>
+                </div>
+                <!-- Customers card -->
+                <div class="cards">
+                    <!-- icon -->
+                    <i class="fas fa-newspaper icons"></i>
+                    <h2>1000+</h2>
+                    <h4>Customers</h4>
+                </div>
+                <!-- earnings card -->
+                <div class="cards">
+                    <!-- icon -->
+                    <i class="fas fa-dollar-sign icons"></i>
+                    <h2>80+</h2>
+                    <h4>Earnings</h4>
+                </div>
+            </div>
+            <!-- users detail -->
+            <table id="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>RamaKrishna123</td>
+                    <td>ramakrishna123@gmail.com</td>
+                    <td>Online</td>
+                </tr>
+                
+                <tr>
+                    <td>2</td>
+                    <td>CoderArjun96</td>
+                    <td>coderarjun@gmail.com</td>
+                    <td>Offline</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sreeram325</td>
+                    <td>sreeram@gmail.com</td>
+                    <td>Offline</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Amika143</td>
+                    <td>amika143@gmail.com</td>
+                    <td>Online</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

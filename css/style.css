@@ -1,0 +1,294 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+#container
+{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #f1f4f9;
+    overflow: hidden;
+}
+/* side bar */
+#sidebar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    background: crimson;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* logo */
+#sidebar #logo
+{
+    height: 70px;
+    width: 70px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    top: 3%;
+}
+#sidebar #logo img
+{
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+}
+/* navigation bar open button */
+#button
+{
+    height: 50px;
+    width: 60px;
+    position: absolute;
+    top: calc(50% - 25px);
+    cursor: pointer;
+}
+.openNav span
+{
+    display: block;
+    height: 6px;
+    width: 50px;
+    border-radius: 50px;
+    margin: 8px 0;
+    background: #fff;
+}
+.openNav span:nth-child(2)
+{
+    margin: 8px 12px;
+    transition: 0.2s;
+}
+.openNav:hover span:nth-child(2)
+{
+    margin: 8px 0;
+}
+/* close navbar */
+#button .fa-times
+{
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    color: #f1f4f9;
+    font-size: 22px;
+}
+/* main navigation bar */
+#navbar-container
+{
+    height: 100vh;
+    width: calc(100% + 300px);
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 998;
+    backdrop-filter: blur(20px);
+    display: none;
+}
+#navbar-container #navbar
+{
+    height: 100%;
+    width: 300px;
+    display: grid;
+    place-items: center;
+    background: crimson;
+}
+#navbar-container #navbar ul
+{
+    list-style: none;
+}
+#navbar-container #navbar ul li
+{
+    margin: 30px 0;
+}
+#navbar-container #navbar ul li a
+{
+    text-decoration: none;
+    color: #ced2da;
+    font-size: 20px;
+    transition: 0.5s;
+}
+#navbar-container #navbar ul li a:hover
+{
+    margin: 30px 15px;
+    color: #f1f4f9;
+}
+#navbar-container #navbar ul .active a
+{
+    margin: 30px 10px;
+    color: #f1f4f9;
+}
+/* main page css */
+#main
+{
+    height: 100%;
+    width: calc(100% - 100px);
+    position: absolute;
+    left: 100px;
+    top: 0;
+    z-index: 997;
+}
+/* header */
+#main #header
+{
+    height: 70px;
+    width: calc(100% + 30px);
+    background: #fff;
+    box-shadow: 2px 2px 5px #00000030;
+    position: absolute;
+    left: -30px;
+    display: flex;
+    align-items: center;
+}
+/* main page title */
+#main #header #title
+{
+    position: absolute;
+    left: 8%;
+    font-size: 22px;
+    font-weight: bolder;
+    color: crimson;
+}
+#main #header #searchBox
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: calc(50% - 160px);
+    z-index: 997;
+}
+#main #header #searchBox input[type="text"]
+{
+    height: 45px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border: 1px solid crimson;
+    padding: 0 20px;
+    border-radius: 30px 0 0 30px;
+    color:crimson; 
+}
+#main #header #searchBox input[type="text"]::placeholder
+{
+    color: crimson; 
+}
+#main #header #searchBox input[type="submit"]
+{
+    height: 45px;
+    width: 80px;
+    border: none;
+    outline: none;
+    background: crimson;
+    border-radius: 0 30px 30px 0;
+    color: #fff;
+    cursor: pointer;
+}
+#main #header #logout
+{
+    height: 50px;
+    width: 150px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 8%;
+    background: crimson;
+    font-size: 18px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+/* analytics */
+#analytics
+{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+}
+/* cards */
+#analytics .cards
+{
+    height: 200px;
+    width: 350px;
+    background: #fff;
+    margin: 0  50px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #00000015;
+}
+#analytics .cards .icons
+{
+    font-size: 40px;
+    color: crimson;
+}
+#analytics .cards h2
+{
+    font-size: 60px;
+    color: #000;
+}
+#analytics .cards h4
+{
+    font-size: 20px;
+    color: #000;
+}
+#analytics .cards:hover
+{
+    background: crimson;
+}
+#analytics .cards:hover .icons
+{
+    color: #fff;
+}
+#analytics .cards:hover h2
+{
+    color: #fff;
+}
+#analytics .cards:hover h4
+{
+    color: #fff;
+}
+
+/* users detail */
+#table
+{
+    height: calc(100% - 350px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 350px;
+    display: grid;
+    place-items: center;
+    border-collapse: collapse;
+    padding: 0 5%;
+}
+#table tr
+{
+    height: 55px;
+}
+#table tr th
+{
+    width: 350px;
+    color: #f1f4f9;
+    background: crimson;
+}
+#table tr td
+{
+    width: 200px;
+    text-align: center;
+    border: 1px solid crimson;
+}
